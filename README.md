@@ -7,9 +7,10 @@
 ## ✨ Features
 
 - ⏱ Schedule reminders by delay in **minutes**
-- 🕒 Or set them for a specific **HH:MM** time
-- 🧵 Forks into the background — doesn’t freeze your terminal
-- ✅ Message shows directly in your terminal
+- 🕒 Or set them for a specific **HH:MM** time (`at:`)
+- 🔁 Optional repeating check-ins (`rm:X`) to show time left
+- ✅ Cancel reminders early with `nemo done`
+- 🧵 Runs in the background — doesn’t freeze your terminal
 - 🖥️ Works on macOS and Linux
 
 ---
@@ -22,7 +23,7 @@ cd nemo
 make
 sudo make install
 ```
- - to Uninstall
+- To unistall 
 ```bash
 sudo make uninstall
 ```
@@ -30,10 +31,16 @@ sudo make uninstall
 ```bash
 nemo "message" <minutes>
 nemo "message" at:HH:MM
+nemo "message" <minutes|at:HH:MM> rm:X
+nemo done
 ```
-## Example Usage
+## Example usage
 ```bash
 nemo "Stand up and stretch!" 30
 nemo "Join Zoom meeting" at:14:15
+nemo "Finish paper" 60 rm:15
+nemo "Presentation in 1 hour" at:17:00 rm:10
+nemo done
 ```
-
+- rm: X shows : progress every X minutes
+- nemo done : cancels any running reminder before it's finished
