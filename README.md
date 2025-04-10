@@ -1,10 +1,39 @@
-# 🧠 nemo – Project-Specific Terminal Reminders
+# 🧠 Nemo – Lightweight Terminal Reminder
 
-**nemo** is a smart CLI tool to save and show reminders or notes tied to specific directories.
+**Nemo** is a minimalist terminal tool to schedule one-time reminders that trigger after a set delay or at a specific time — without blocking your terminal. It's perfect for developers who live in the command line.
 
-## 💻 Usage
+---
+
+## ✨ Features
+
+- ⏱ Schedule reminders by delay in **minutes**
+- 🕒 Or set them for a specific **HH:MM** time
+- 🧵 Forks into the background — doesn’t freeze your terminal
+- ✅ Message shows directly in your terminal
+- 🖥️ Works on macOS and Linux
+
+---
+
+## 🚀 Installation
 
 ```bash
-nemo "Remember to commit changes"
-nemo "Deploy service" "18:30"
-nemo "Drink water" "" "30"
+git clone https://github.com/YOUR_USERNAME/nemo.git
+cd nemo
+make
+sudo make install
+```
+ - to Uninstall
+```bash
+sudo make uninstall
+```
+## Usage
+```bash
+nemo "message" <minutes>
+nemo "message" at:HH:MM
+```
+## Example Usage
+```bash
+nemo "Stand up and stretch!" 30
+nemo "Join Zoom meeting" at:14:15
+```
+
